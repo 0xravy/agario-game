@@ -49,4 +49,3 @@ function draw() {
     blob.update();
 
 }
-
