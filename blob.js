@@ -24,6 +24,8 @@ function Blob(x, y, r) {
     }
 
     this.show = function() {
+        var Random = random(0, 255);
+
         fill(255);
         ellipse(this.pos.x, this.pos.y, this.r*2, this.r*2);
     }
