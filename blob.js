@@ -5,7 +5,7 @@ function Blob(x, y, r) {
 
     this.update = function() {
         var newvel = createVector(mouseX-width/2, mouseY-height/2);
-        newvel.setMag(10);
+        newvel.setMag(50);
         this.vel.lerp(newvel, 0.1)
         this.pos.add(this.vel);
     }
@@ -24,9 +24,10 @@ function Blob(x, y, r) {
     }
 
     this.show = function() {
-        var Random = random(0, 255);
 
-        fill(255);
+        fill(random(0, 255), random(0, 255), random(0, 255));
+
+        // fill(0, Random);
         ellipse(this.pos.x, this.pos.y, this.r*2, this.r*2);
     }
 }
