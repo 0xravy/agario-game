@@ -1,3 +1,3 @@
 # agario
 
-***https://aravns.github.io/agario/***
+***https://aravns.github.io/agario-game/***
