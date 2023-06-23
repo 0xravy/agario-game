@@ -1,13 +1,17 @@
 function Blob(x, y, r) {
     this.pos = createVector(x, y);
     this.r = r;
-    this.vel = createVector(0, 0)
+    this.vel = createVector(0, 0)  
 
-    this.update = function() {
+    this.update = () => {
         var newvel = createVector(mouseX-width/2, mouseY-height/2);
-        newvel.setMag(10);
+        newvel.setMag(12);
         this.vel.lerp(newvel, 0.1)
         this.pos.add(this.vel);
+        
+        console.log(`
+pos: ${this.pos}
+`)
     }
 
     this.eats = function(other) {
@@ -25,7 +29,8 @@ function Blob(x, y, r) {
 
     this.show = function() {
 
-        fill(random(0, 255), random(0, 255), random(0, 255));
+        // player color
+        fill(120, 130, 120);
 
         // fill(0, Random);
         ellipse(this.pos.x, this.pos.y, this.r*2, this.r*2);
